@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+     <script>
+         function doMonument()
+         {
+             var monument = document.monumentForm.monument.value;
+             alert(monument);
+             document.getElementById("x").innerHTML = "<img src=\"images/" + monument + "\" height=200 width=300 />";
+         }        
+     </script> 
+  </head>
+
+  <body style="background-color: cyan; text-align: center">
+    <form name="monumentForm" > 
+     <select name="monument" onChange="doMonument()" >
+        <option value="VS.jpg">Vidhana Soudha</option>
+        <option value="TM.jpg">Taj Mahal</option>
+        <option value="MP.jpg">Mysore Palace</option>
+     </select>
+     <br>
+     <br>
+     <div id="x"></div>
+    </form>
+  </body>
+</html>

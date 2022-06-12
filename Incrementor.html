@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+     <script>
+        function doSubmit()
+        {
+             var m = document.incrementForm.number.value; 
+             var n = parseInt(m) + 1;
+             document.getElementById('result').innerHTML = n;
+             document.incrementForm.number.value = n;   
+        }
+     </script>
+  </head>
+
+  <body style="background-color: cyan; text-align: center" >
+
+     <form name="incrementForm" >
+        <br>
+        <br>
+        <h1><div id="result">0</div></h1>
+        <br>
+        <input type="hidden" name="number" value="0" />
+        <br> 
+        <input type="button" value="Increment" onClick="return doSubmit()" />
+        <br> 
+     </form>
+
+  </body>
+
+</html>

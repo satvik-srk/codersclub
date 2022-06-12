@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      function convertToFahrenheit() {
+        var fahRenheit = 1.8 * document.getElementById("input").value + 32;
+
+        document.getElementById("result").innerHTML = fahRenheit;
+      }
+    </script>
+  </head>
+  <body>
+    <p>Enter Celsius value :</p>
+    <input id="input" />
+    <button onclick="convertToFahrenheit()">Convert to Fahrenheit</button>
+    <p id="result"></p>
+  </body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      function convertToCelsius() {
+        var Celsius = (document.getElementById("input").value - 32)/1.8;
+
+        document.getElementById("result").innerHTML = Celsius;
+      }
+    </script>
+  </head>
+  <body>
+    <p>Enter fahrenheit value :</p>
+    <input id="input" />
+    <button onclick="convertToCelsius()">Convert to Celsius</button>
+    <p id="result"></p>
+  </body>
+</html>

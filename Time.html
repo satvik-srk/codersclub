@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <script>
+       function doCurrentTime()
+       {
+           document.getElementById("time").innerHTML = getTime();
+       }
+
+       function getTime() {
+           var date = new Date();
+           var hour, minute, second;
+
+           hour = date.getHours().toString();
+           hour = hour.length > 1 ? hour : '0' + hour;
+
+           minute = (1 + date.getMinutes()).toString();
+           minute = minute.length > 1 ? minute : '0' + minute;
+
+           second = date.getSeconds().toString();
+           second = second.length > 1 ? second : '0' + second;
+
+           return hour + ':' + minute + ':' + second;
+       }
+    </script>
+  </head>
+
+  <body style="background-color: cyan; text-align: center">
+     <br>
+     <br>
+     <input type="button" value="Current Time" onClick="doCurrentTime()" />
+     <br>
+     <br>
+     <font color="red"><h1><div id="time" ></h1></div></font>
+  </body>
+</html>

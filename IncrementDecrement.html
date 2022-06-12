@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+     <script>
+        function doSubmit(operator)
+        {
+             var m = document.incDecForm.number.value; 
+             var n;
+             if ( operator == '+' ) {
+                   n = parseInt(m) + 1;
+             }
+             else {
+                n = parseInt(m) - 1;
+             }
+
+             document.getElementById('result').innerHTML = n;
+             document.incDecForm.number.value = n;   
+        }
+
+     </script>
+  </head>
+
+  <body style="background-color: cyan; text-align: center" >
+
+     <form name="incDecForm" >
+        <br>
+        <br>
+        <h1><div id="result">0</div></h1>
+        <br>
+        <input type="hidden" name="number" value="0" />
+        <br> 
+        <input type="button" value="Increment" onClick="return doSubmit('+')" />
+        <input type="button" value="Decrement" onClick="return doSubmit('-')" />
+        <br> 
+     </form>
+
+  </body>
+
+</html>
